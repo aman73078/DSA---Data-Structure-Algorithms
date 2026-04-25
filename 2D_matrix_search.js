@@ -72,7 +72,85 @@ console.log(`Result of searchIn2DMatrix : ${searchIn2DMatrix(13, matrix)}`);
 // 🟢 Linear Search in Matrix
 
 // Q121. Search element in matrix
+/*📄 Problem
+        Given a 2D matrix and a target value, return true if the target exists in the matrix, otherwise return false.
+
+        You can assume:
+
+        Matrix can be any size (m x n)
+        Elements are not necessarily sorted
+        🧪 Example
+        Input:
+        matrix = [
+        [1, 2, 3],
+        [4, 5, 6]
+        ]
+        target = 5
+
+        Output:
+        true
+*/
+
+const searchElementInMatrix = (target, matrix) => {
+    let left = 0;
+    let right = (matrix.length * matrix[0].length)-1;
+    const row = matrix.length;
+    const column = matrix[0].length;
+
+    while(left <= right){
+        let midIndex = Math.floor(left + (right-left)/2);
+        let midElement = matrix[Math.floor(midIndex/column)][Math.floor(midIndex%column)];
+        if(midElement === target){
+            return true;
+        }else if(midElement < target){
+            left = midIndex + 1;
+        }else {
+            right = midIndex - 1;
+        }
+    }
+    return false;
+}
+
+console.log(`Result of searchElementInMatrix : ${searchElementInMatrix(5,[[1,2,3],[4,5,6]])}`);
+console.log(`Result of searchElementInMatrix : ${searchElementInMatrix(8,[[1,2,3],[4,5,6]])}`);
+
+// Complexity
+// Time -- O(m*n)
+// Space -- O(1)
+
+const searchElementInMatrix1 = (target, matrix, left=0, right=(matrix.length*matrix[0].length)-1) => {
+    if(left > right) return false;
+    let column = matrix[0].length;
+    let midIndex = Math.floor(left + (right-left)/2);
+    let midElement = matrix[Math.floor(midIndex/column)][Math.floor(midIndex%column)];
+    return midElement === target ? true : midElement < target ? searchElementInMatrix1(target, matrix, midIndex+1, right) : searchElementInMatrix1(target, matrix, left, midIndex-1);
+}
+
+console.log(`Result of searchElementInMatrix1 : ${searchElementInMatrix1(5,[[1,2,3],[4,5,6]])}`);
+console.log(`Result of searchElementInMatrix1 : ${searchElementInMatrix1(8,[[1,2,3],[4,5,6]])}`);
+
+// Complexity
+// Time -- O(logm*n)
+// Space -- O(logm*n)
+
 // Q122. Count occurrences
+/*  📄 Problem
+            Given a 2D matrix and a target value, return the number of times the target appears in the matrix.
+
+            Matrix is not necessarily sorted
+            You need to count all occurrences
+            🧪 Example
+            Input:
+            matrix = [
+            [1, 2, 3],
+            [2, 2, 4]
+            ]
+            target = 2
+
+            Output:
+            3
+*/
+
 // Q123. Find max element
 // Q124. Find min element
 // Q125. Row-wise sum
