@@ -66,3 +66,60 @@ function searchIn2DMatrix(target, matrix){
 
 console.log(`Result of searchIn2DMatrix : ${searchIn2DMatrix(10, matrix)}`);
 console.log(`Result of searchIn2DMatrix : ${searchIn2DMatrix(13, matrix)}`);
+
+
+// 🧩 PART 3: 2D Matrix Search (Q121–Q180)
+// 🟢 Linear Search in Matrix
+
+// Q121. Search element in matrix
+// Q122. Count occurrences
+// Q123. Find max element
+// Q124. Find min element
+// Q125. Row-wise sum
+// Q126. Column-wise sum
+// Q127. Count even numbers
+// Q128. Count odd numbers
+// Q129. Count positives/negatives
+// Q130. Check if element exists
+
+// 🟡 Binary Search in Matrix
+
+// Q131. Search in 2D matrix (flattened)
+// Q132. First occurrence in matrix
+// Q133. Last occurrence in matrix
+// Q134. Count occurrences
+// Q135. Recursive binary search matrix
+// Q136. Find row containing target
+// Q137. Find column containing target
+// Q138. Closest element in matrix
+// Q139. Range of element in matrix
+// Q140. Search insert position matrix
+
+// 🔵 Row-wise / Column-wise Sorted Matrix
+
+// Q141. Search in row-wise sorted matrix
+// Q142. Search in column-wise sorted matrix
+// Q143. Start from top-right search
+// Q144. Count elements less than target
+// Q145. Count elements greater than target
+// Q146. Find max in each row
+// Q147. Find min in each column
+
+// 🟣 Recursive Matrix
+
+// Q148. Recursive matrix traversal
+// Q149. Recursive search
+// Q150. Recursive sum
+// Q151. Recursive count
+// Q152. Recursive max
+// Q153. Recursive min
+// Q154. Recursive diagonal sum
+// Q155. Recursive boundary traversal
+
+// 🔥 Mixed Practice
+
+// Q156. Flatten matrix and search
+// Q157. Convert matrix to 1D array
+// Q158. Check sorted matrix
+// Q159. Find duplicate in matrix
+// Q160. Find missing element in matrix
